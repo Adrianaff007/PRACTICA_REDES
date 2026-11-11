@@ -1,0 +1,251 @@
+Key,English(en),Spanish(es)
+Q1_Text,What is the capital of France?,¿Cuál es la capital de Francia?
+Q1_Correct,Paris,París
+Q1_Decoy1,Berlin,Berlín
+Q1_Decoy2,Rome,Roma
+Q1_Decoy3,Madrid,Madrid
+Q2_Text,In which year did World War II end?,¿En qué año terminó la Segunda Guerra Mundial?
+Q2_Correct,1945,1945
+Q2_Decoy1,1943,1943
+Q2_Decoy2,1947,1947
+Q2_Decoy3,1950,1950
+Q3_Text,"Who wrote the play ""Romeo and Juliet""?","¿Quién escribió la obra ""Romeo y Julieta""?"
+Q3_Correct,William Shakespeare,William Shakespeare
+Q3_Decoy1,Charles Dickens,Charles Dickens
+Q3_Decoy2,Jane Austen,Jane Austen
+Q3_Decoy3,Mark Twain,Mark Twain
+Q4_Text,What is the chemical symbol for gold?,¿Cuál es el símbolo químico del oro?
+Q4_Correct,Au,Au
+Q4_Decoy1,Ag,Ag
+Q4_Decoy2,Fe,Fe
+Q4_Decoy3,Hg,Hg
+Q5_Text,What is the largest planet in our solar system?,¿Cuál es el planeta más grande de nuestro sistema solar?
+Q5_Correct,Jupiter,Júpiter
+Q5_Decoy1,Venus,Venus
+Q5_Decoy2,Mars,Marte
+Q5_Decoy3,Saturn,Saturno
+Q6_Text,Which famous scientist developed the theory of relativity?,¿Qué famoso científico desarrolló la teoría de la relatividad?
+Q6_Correct,Albert Einstein,Albert Einstein
+Q6_Decoy1,Isaac Newton,Isaac Newton
+Q6_Decoy2,Galileo Galilei,Galileo Galilei
+Q6_Decoy3,Stephen Hawking,Stephen Hawking
+Q7_Text,In what year did the Titanic sink?,¿En qué año se hundió el Titanic?
+Q7_Correct,1912,1912
+Q7_Decoy1,1910,1910
+Q7_Decoy2,1915,1915
+Q7_Decoy3,1920,1920
+Q8_Text,What is the capital of Japan?,¿Cuál es la capital de Japón?
+Q8_Correct,Tokyo,Tokio
+Q8_Decoy1,Seoul,Seúl
+Q8_Decoy2,Beijing,Pekín
+Q8_Decoy3,Bangkok,Bangkok
+Q9_Text,Who painted the Mona Lisa?,¿Quién pintó la Mona Lisa?
+Q9_Correct,Leonardo da Vinci,Leonardo da Vinci
+Q9_Decoy1,Vincent van Gogh,Vincent van Gogh
+Q9_Decoy2,Pablo Picasso,Pablo Picasso
+Q9_Decoy3,Michelangelo,Miguel Ángel
+Q10_Text,What is the largest ocean on Earth?,¿Cuál es el océano más grande de la Tierra?
+Q10_Correct,Pacific Ocean,Océano Pacífico
+Q10_Decoy1,Atlantic Ocean,Océano Atlántico
+Q10_Decoy2,Indian Ocean,Océano Índico
+Q10_Decoy3,Arctic Ocean,Océano Ártico
+Q11_Text,"Which planet is known as the ""Red Planet""?","¿Qué planeta es conocido como el ""Planeta Rojo""?"
+Q11_Correct,Mars,Marte
+Q11_Decoy1,Venus,Venus
+Q11_Decoy2,Jupiter,Júpiter
+Q11_Decoy3,Saturn,Saturno
+Q12_Text,Who is the author of the Harry Potter series?,¿Quién es la autora de la serie de Harry Potter?
+Q12_Correct,J.K. Rowling,J.K. Rowling
+Q12_Decoy1,J.R.R. Tolkien,J.R.R. Tolkien
+Q12_Decoy2,George R.R. Martin,George R.R. Martin
+Q12_Decoy3,Suzanne Collins,Suzanne Collins
+Q13_Text,What is the capital of Australia?,¿Cuál es la capital de Australia?
+Q13_Correct,Canberra,Canberra
+Q13_Decoy1,Sydney,Sídney
+Q13_Decoy2,Melbourne,Melbourne
+Q13_Decoy3,Brisbane,Brisbane
+Q14_Text,Who is the current President of the United States?,¿Quién es el actual presidente de los Estados Unidos?
+Q14_Correct,Joe Biden,Joe Biden
+Q14_Decoy1,Donald Trump,Donald Trump
+Q14_Decoy2,Barack Obama,Barack Obama
+Q14_Decoy3,George W. Bush,George W. Bush
+Q15_Text,"Which element has the chemical symbol ""O""?","¿Qué elemento tiene el símbolo químico ""O""?"
+Q15_Correct,Oxygen,Oxígeno
+Q15_Decoy1,Gold,Oro
+Q15_Decoy2,Iron,Hierro
+Q15_Decoy3,Silver,Plata
+Q16_Text,What is the currency of China?,¿Cuál es la moneda de China?
+Q16_Correct,Yuan,Yuan
+Q16_Decoy1,Yen,Yen
+Q16_Decoy2,Won,Won
+Q16_Decoy3,Ringgit,Ringgit
+Q17_Text,"Who wrote the play ""Hamlet""?","¿Quién escribió la obra ""Hamlet""?"
+Q17_Correct,William Shakespeare,William Shakespeare
+Q17_Decoy1,Jane Austen,Jane Austen
+Q17_Decoy2,Charles Dickens,Charles Dickens
+Q17_Decoy3,F. Scott Fitzgerald,F. Scott Fitzgerald
+Q18_Text,In which year did the Berlin Wall fall?,¿En qué año cayó el Muro de Berlín?
+Q18_Correct,1989,1989
+Q18_Decoy1,1985,1985
+Q18_Decoy2,1991,1991
+Q18_Decoy3,1995,1995
+Q19_Text,What is the largest mammal in the world?,¿Cuál es el mamífero más grande del mundo?
+Q19_Correct,Blue whale,Ballena azul
+Q19_Decoy1,Elephant,Elefante
+Q19_Decoy2,Giraffe,Jirafa
+Q19_Decoy3,Gorilla,Gorila
+Q20_Text,"Who is known as the ""Father of Computers""?","¿Quién es conocido como el ""Padre de los ordenadores""?"
+Q20_Correct,Alan Turing,Alan Turing
+Q20_Decoy1,Bill Gates,Bill Gates
+Q20_Decoy2,Steve Jobs,Steve Jobs
+Q20_Decoy3,Charles Babbage,Charles Babbage
+Q21_Text,What is the official language of Brazil?,¿Cuál es el idioma oficial de Brasil?
+Q21_Correct,Portuguese,Portugués
+Q21_Decoy1,Spanish,Español
+Q21_Decoy2,French,Francés
+Q21_Decoy3,Italian,Italiano
+Q22_Text,Who painted the Starry Night?,¿Quién pintó La noche estrellada?
+Q22_Correct,Vincent van Gogh,Vincent van Gogh
+Q22_Decoy1,Claude Monet,Claude Monet
+Q22_Decoy2,Pablo Picasso,Pablo Picasso
+Q22_Decoy3,Salvador Dalí,Salvador Dalí
+Q23_Text,In which country is the Great Barrier Reef located?,¿En qué país se encuentra la Gran Barrera de Coral?
+Q23_Correct,Australia,Australia
+Q23_Decoy1,Brazil,Brasil
+Q23_Decoy2,Mexico,México
+Q23_Decoy3,India,India
+Q24_Text,What is the smallest prime number?,¿Cuál es el número primo más pequeño?
+Q24_Correct,2,2
+Q24_Decoy1,0,0
+Q24_Decoy2,1,1
+Q24_Decoy3,3,3
+Q25_Text,"Which planet is known as the ""Blue Planet""?","¿Qué planeta es conocido como el ""Planeta Azul""?"
+Q25_Correct,Earth,Tierra
+Q25_Decoy1,Venus,Venus
+Q25_Decoy2,Mars,Marte
+Q25_Decoy3,Jupiter,Júpiter
+Q26_Text,What is the chemical symbol for silver?,¿Cuál es el símbolo químico de la plata?
+Q26_Correct,Ag,Ag
+Q26_Decoy1,Si,Si
+Q26_Decoy2,Au,Au
+Q26_Decoy3,Fe,Fe
+Q27_Text,"Who wrote the play ""Macbeth""?","¿Quién escribió la obra ""Macbeth""?"
+Q27_Correct,William Shakespeare,William Shakespeare
+Q27_Decoy1,Jane Austen,Jane Austen
+Q27_Decoy2,Charles Dickens,Charles Dickens
+Q27_Decoy3,F. Scott Fitzgerald,F. Scott Fitzgerald
+Q28_Text,In which year did the United States declare its independence?,¿En qué año declararon su independencia los Estados Unidos?
+Q28_Correct,1776,1776
+Q28_Decoy1,1774,1774
+Q28_Decoy2,1783,1783
+Q28_Decoy3,1800,1800
+Q29_Text,What is the largest desert in the world?,¿Cuál es el desierto más grande del mundo?
+Q29_Correct,Antarctica,Antártida
+Q29_Decoy1,Sahara Desert,Desierto del Sáhara
+Q29_Decoy2,Arabian Desert,Desierto de Arabia
+Q29_Decoy3,Gobi Desert,Desierto de Gobi
+Q30_Text,Who is the Greek god of the sea?,¿Quién es el dios griego del mar?
+Q30_Correct,Poseidon,Poseidón
+Q30_Decoy1,Zeus,Zeus
+Q30_Decoy2,Apollo,Apolo
+Q30_Decoy3,Hermes,Hermes
+Q31_Text,What is the capital of Canada?,¿Cuál es la capital de Canadá?
+Q31_Correct,Ottawa,Ottawa
+Q31_Decoy1,Toronto,Toronto
+Q31_Decoy2,Vancouver,Vancouver
+Q31_Decoy3,Montreal,Montreal
+Q32_Text,"Who wrote the novel ""To Kill a Mockingbird""?","¿Quién escribió la novela ""Matar a un ruiseñor""?"
+Q32_Correct,Harper Lee,Harper Lee
+Q32_Decoy1,J.R.R. Tolkien,J.R.R. Tolkien
+Q32_Decoy2,Jane Austen,Jane Austen
+Q32_Decoy3,George Orwell,George Orwell
+Q33_Text,What is the square root of 64?,¿Cuál es la raíz cuadrada de 64?
+Q33_Correct,8,8
+Q33_Decoy1,6,6
+Q33_Decoy2,10,10
+Q33_Decoy3,12,12
+Q34_Text,"Which planet is known as the ""Morning Star"" or ""Evening Star""?","¿Qué planeta es conocido como la ""Estrella de la Mañana"" o la ""Estrella de la Tarde""?"
+Q34_Correct,Venus,Venus
+Q34_Decoy1,Mars,Marte
+Q34_Decoy2,Jupiter,Júpiter
+Q34_Decoy3,Mercury,Mercurio
+Q35_Text,What is the chemical symbol for water?,¿Cuál es la fórmula química del agua?
+Q35_Correct,H2O,H2O
+Q35_Decoy1,CO2,CO2
+Q35_Decoy2,O2,O2
+Q35_Decoy3,N2,N2
+Q36_Text,Who painted the Last Supper?,¿Quién pintó La Última Cena?
+Q36_Correct,Leonardo da Vinci,Leonardo da Vinci
+Q36_Decoy1,Michelangelo,Miguel Ángel
+Q36_Decoy2,Vincent van Gogh,Vincent van Gogh
+Q36_Decoy3,Pablo Picasso,Pablo Picasso
+Q37_Text,In which year did Christopher Columbus first reach the Americas?,¿En qué año llegó Cristóbal Colón por primera vez a América?
+Q37_Correct,1492,1492
+Q37_Decoy1,1500,1500
+Q37_Decoy2,1607,1607
+Q37_Decoy3,1776,1776
+Q38_Text,What is the largest bird in the world?,¿Cuál es el ave más grande del mundo?
+Q38_Correct,Ostrich,Avestruz
+Q38_Decoy1,Eagle,Águila
+Q38_Decoy2,Penguin,Pingüino
+Q38_Decoy3,Falcon,Halcón
+Q39_Text,"Who is the author of ""The Great Gatsby""?","¿Quién es el autor de ""El gran Gatsby""?"
+Q39_Correct,F. Scott Fitzgerald,F. Scott Fitzgerald
+Q39_Decoy1,Ernest Hemingway,Ernest Hemingway
+Q39_Decoy2,Jane Austen,Jane Austen
+Q39_Decoy3,George Orwell,George Orwell
+Q40_Text,What is the speed of light?,¿Cuál es la velocidad de la luz?
+Q40_Correct,"300,000 km/s",300.000 km/s
+Q40_Decoy1,"150,000 km/s",150.000 km/s
+Q40_Decoy2,"500,000 km/s",500.000 km/s
+Q40_Decoy3,"10,000 km/s",10.000 km/s
+Q41_Text,Which country is known as the Land of the Rising Sun?,¿Qué país es conocido como la Tierra del Sol Naciente?
+Q41_Correct,Japan,Japón
+Q41_Decoy1,China,China
+Q41_Decoy2,South Korea,Corea del Sur
+Q41_Decoy3,Vietnam,Vietnam
+Q42_Text,What is the currency of the United Kingdom?,¿Cuál es la moneda del Reino Unido?
+Q42_Correct,Pound Sterling,Libra esterlina
+Q42_Decoy1,Euro,Euro
+Q42_Decoy2,Dollar,Dólar
+Q42_Decoy3,Yen,Yen
+Q43_Text,Who is the lead vocalist of the band Queen?,¿Quién es el vocalista principal de la banda Queen?
+Q43_Correct,Freddie Mercury,Freddie Mercury
+Q43_Decoy1,John Lennon,John Lennon
+Q43_Decoy2,Mick Jagger,Mick Jagger
+Q43_Decoy3,David Bowie,David Bowie
+Q44_Text,In which year did the first moon landing occur?,¿En qué año tuvo lugar el primer alunizaje?
+Q44_Correct,1969,1969
+Q44_Decoy1,1961,1961
+Q44_Decoy2,1975,1975
+Q44_Decoy3,1983,1983
+Q45_Text,What is the largest island in the world?,¿Cuál es la isla más grande del mundo?
+Q45_Correct,Greenland,Groenlandia
+Q45_Decoy1,Australia,Australia
+Q45_Decoy2,Borneo,Borneo
+Q45_Decoy3,Madagascar,Madagascar
+Q46_Text,Who painted the Sistine Chapel ceiling?,¿Quién pintó el techo de la Capilla Sixtina?
+Q46_Correct,Michelangelo,Miguel Ángel
+Q46_Decoy1,Leonardo da Vinci,Leonardo da Vinci
+Q46_Decoy2,Raphael,Rafael
+Q46_Decoy3,Donatello,Donatello
+Q47_Text,What is the capital of South Africa?,¿Cuál es la capital de Sudáfrica?
+Q47_Correct,Pretoria,Pretoria
+Q47_Decoy1,Nairobi,Nairobi
+Q47_Decoy2,Cape Town,Ciudad del Cabo
+Q47_Decoy3,Johannesburg,Johannesburgo
+Q48_Text,Who discovered penicillin?,¿Quién descubrió la penicilina?
+Q48_Correct,Alexander Fleming,Alexander Fleming
+Q48_Decoy1,Marie Curie,Marie Curie
+Q48_Decoy2,Louis Pasteur,Louis Pasteur
+Q48_Decoy3,Joseph Lister,Joseph Lister
+Q49_Text,What is the largest moon of Jupiter?,¿Cuál es la luna más grande de Júpiter?
+Q49_Correct,Ganymede,Ganímedes
+Q49_Decoy1,Io,Ío
+Q49_Decoy2,Europa,Europa
+Q49_Decoy3,Callisto,Calisto
+Q50_Text,"Who wrote the novel ""1984""?","¿Quién escribió la novela ""1984""?"
+Q50_Correct,George Orwell,George Orwell
+Q50_Decoy1,Aldous Huxley,Aldous Huxley
+Q50_Decoy2,Ray Bradbury,Ray Bradbury
+Q50_Decoy3,H.G. Wells,H.G. Wells
