@@ -1,0 +1,14 @@
+# Carpetas generadas por Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

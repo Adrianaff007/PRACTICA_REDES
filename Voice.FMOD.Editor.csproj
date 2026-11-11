@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6A4D5895-46A6-B5D3-5A40-DCCCA190745D}</ProjectGuid>
+    <ProjectGuid>{34900807-764E-DB88-2294-A7E08E67BACC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Voice.FMOD.Editor</AssemblyName>
@@ -1057,19 +1057,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonVoice.Editor.csproj">
-      <Project>{B1A72F1B-9915-9023-C8F5-B63240FC1835}</Project>
+      <Project>{D59AE22F-4219-BFE4-4D0C-3167A2B6F011}</Project>
       <Name>PhotonVoice.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{011704BC-6594-4692-0CAE-E882B966AED7}</Project>
+      <Project>{1AF0829C-6F76-10FF-4022-85C3DE9FF1AD}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.API.csproj">
-      <Project>{D66F6C1A-196E-014A-701F-6E083BA62AA3}</Project>
+      <Project>{DE9DB3E5-7229-F82B-C9F1-4326FEA73FBB}</Project>
       <Name>PhotonVoice.API</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.csproj">
-      <Project>{AC7CBA08-638D-F78B-4F11-03CF69A3F45E}</Project>
+      <Project>{285909DA-044A-AC98-8E97-380B24442143}</Project>
       <Name>PhotonVoice</Name>
     </ProjectReference>
   </ItemGroup>

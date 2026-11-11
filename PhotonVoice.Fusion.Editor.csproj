@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5CA407BA-530F-70DC-F49A-2601426ED25C}</ProjectGuid>
+    <ProjectGuid>{DB7D40C6-1AD9-20E1-F237-4261BD706993}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonVoice.Fusion.Editor</AssemblyName>
@@ -1058,15 +1058,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonVoice.Fusion.csproj">
-      <Project>{D3F8FB09-B8F3-7739-9355-055DD07F1E6A}</Project>
+      <Project>{3AE7E86C-E8D6-2ACD-C5E7-FDE4A5F69ECD}</Project>
       <Name>PhotonVoice.Fusion</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Editor.csproj">
-      <Project>{B1A72F1B-9915-9023-C8F5-B63240FC1835}</Project>
+      <Project>{D59AE22F-4219-BFE4-4D0C-3167A2B6F011}</Project>
       <Name>PhotonVoice.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Fusion.Unity.Editor.csproj">
-      <Project>{3BC35A9D-3423-7BB6-DAFD-AB98721F1CA5}</Project>
+      <Project>{17CC22E6-DA7E-79C5-FBD1-5B5183BE41C4}</Project>
       <Name>Fusion.Unity.Editor</Name>
     </ProjectReference>
   </ItemGroup>

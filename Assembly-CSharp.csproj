@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8DE073ED-BB7C-4265-BA1D-E95D2ECFA61A}</ProjectGuid>
+    <ProjectGuid>{E03E577E-A2AC-A2BC-D8B1-41D8BCEB0CC7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -1241,47 +1241,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonVoice.API.csproj">
-      <Project>{D66F6C1A-196E-014A-701F-6E083BA62AA3}</Project>
+      <Project>{DE9DB3E5-7229-F82B-C9F1-4326FEA73FBB}</Project>
       <Name>PhotonVoice.API</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.csproj">
-      <Project>{AC7CBA08-638D-F78B-4F11-03CF69A3F45E}</Project>
+      <Project>{285909DA-044A-AC98-8E97-380B24442143}</Project>
       <Name>PhotonVoice</Name>
     </ProjectReference>
     <ProjectReference Include="MicAmplifierEditor.Editor.csproj">
-      <Project>{0B316209-F2E0-70B6-E3DA-F3FFA3856680}</Project>
+      <Project>{3515F079-1493-3849-612D-BE8A515BE13D}</Project>
       <Name>MicAmplifierEditor.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Voice.FMOD.Editor.csproj">
-      <Project>{6A4D5895-46A6-B5D3-5A40-DCCCA190745D}</Project>
+      <Project>{34900807-764E-DB88-2294-A7E08E67BACC}</Project>
       <Name>Voice.FMOD.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Fusion.Unity.Editor.csproj">
-      <Project>{3BC35A9D-3423-7BB6-DAFD-AB98721F1CA5}</Project>
+      <Project>{17CC22E6-DA7E-79C5-FBD1-5B5183BE41C4}</Project>
       <Name>Fusion.Unity.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Editor.csproj">
-      <Project>{B1A72F1B-9915-9023-C8F5-B63240FC1835}</Project>
+      <Project>{D59AE22F-4219-BFE4-4D0C-3167A2B6F011}</Project>
       <Name>PhotonVoice.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
-      <Project>{BCEEC914-1BD2-26A7-25EE-129FF867F79A}</Project>
+      <Project>{9CD97E4B-6162-7E20-CA27-0BA29C0BA24F}</Project>
       <Name>PhotonVoice.Utilities.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{011704BC-6594-4692-0CAE-E882B966AED7}</Project>
+      <Project>{1AF0829C-6F76-10FF-4022-85C3DE9FF1AD}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Fusion.csproj">
-      <Project>{D3F8FB09-B8F3-7739-9355-055DD07F1E6A}</Project>
+      <Project>{3AE7E86C-E8D6-2ACD-C5E7-FDE4A5F69ECD}</Project>
       <Name>PhotonVoice.Fusion</Name>
     </ProjectReference>
     <ProjectReference Include="Fusion.Unity.csproj">
-      <Project>{07C87197-7AC0-CACB-21ED-B921A884A1E6}</Project>
+      <Project>{0315DAA5-C5BC-FE2C-122D-03453E74D74E}</Project>
       <Name>Fusion.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Fusion.Editor.csproj">
-      <Project>{5CA407BA-530F-70DC-F49A-2601426ED25C}</Project>
+      <Project>{DB7D40C6-1AD9-20E1-F237-4261BD706993}</Project>
       <Name>PhotonVoice.Fusion.Editor</Name>
     </ProjectReference>
   </ItemGroup>

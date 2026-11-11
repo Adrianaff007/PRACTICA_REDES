@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0B316209-F2E0-70B6-E3DA-F3FFA3856680}</ProjectGuid>
+    <ProjectGuid>{3515F079-1493-3849-612D-BE8A515BE13D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MicAmplifierEditor.Editor</AssemblyName>
@@ -1057,7 +1057,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonVoice.csproj">
-      <Project>{AC7CBA08-638D-F78B-4F11-03CF69A3F45E}</Project>
+      <Project>{285909DA-044A-AC98-8E97-380B24442143}</Project>
       <Name>PhotonVoice</Name>
     </ProjectReference>
   </ItemGroup>
