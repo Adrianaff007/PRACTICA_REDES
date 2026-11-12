@@ -106,23 +106,11 @@ public class TriviaQuestionSet : ScriptableObject
 #endif
     }
 
-    [ContextMenu("Export CSV for String Table")]
-    public void ExportCsv()
+    
+    private void OnValidate()
     {
-        string Esc(string s) => "\"" + (s ?? "").Replace("\"", "\"\"") + "\"";
-
-        var sb = new System.Text.StringBuilder();
-        sb.AppendLine("Key,English(en),Spanish(es)");
-        foreach (var q in _questions)
-        {
-            sb.AppendLine($"{q.key}_Text,{Esc(q.question)},");
-            sb.AppendLine($"{q.key}_Correct,{Esc(q.correctAnswer)},");
-            for (int i = 0; i < 3; i++)
-                sb.AppendLine($"{q.key}_Decoy{i + 1},{Esc(q.decoyAnswers[i])},");
-        }
-
-        string path = System.IO.Path.Combine(Application.dataPath, "preguntas_export.csv");
-        System.IO.File.WriteAllText(path, sb.ToString(), new System.Text.UTF8Encoding(true));
-        Debug.Log("CSV exportado en: " + path);
+        if (_questions == null) return;
+        for (int i = 0; i < _questions.Count; i++)
+            _questions[i].key = "Q" + (i + 1);
     }
 }

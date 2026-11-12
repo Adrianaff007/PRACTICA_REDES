@@ -8,6 +8,11 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"picker_window_position_offset.45F317DD" = "-463;646;320;550"
+	"picker_search_text.45F317DD" = "start"
+	"last_search.45F317DD" = "start"
+	"OpenInspectorPreview.45F317DD" = "0"
+	"currentGroup.45F317DD" = "all"
 }
 providers = {
 	log = {
@@ -55,10 +60,21 @@ providers = {
 		priority = 90
 		defaultAction = null
 	}
+	st = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	at = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
 }
 objectSelectors = {
 }
 recentSearches = [
+	"n"
 ]
 searchItemFavorites = [
 ]
