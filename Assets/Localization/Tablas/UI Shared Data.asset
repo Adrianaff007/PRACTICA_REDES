@@ -14,7 +14,91 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: 4ed91660af372274b90c569473d0ec9d
-  m_Entries: []
+  m_Entries:
+  - m_Id: 33355264000
+    m_Key: Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248472727552
+    m_Key: player_name_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 307893432320
+    m_Key: player_name_placeholder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336649580544
+    m_Key: room_name_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 813831352320
+    m_Key: room_name_placeholder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 843862568960
+    m_Key: join_room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 875034636288
+    m_Key: create_room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3094190551040
+    m_Key: start_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3097508245504
+    m_Key: leave_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3098883977216
+    m_Key: start_new_game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3100062576640
+    m_Key: msg_intro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3527944499200
+    m_Key: msg_newround
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3592448700416
+    m_Key: msg_no_winners
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3651932319744
+    m_Key: msg_winner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3724913209344
+    m_Key: question_counter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3773298700288
+    m_Key: room_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3851514081280
+    m_Key: pregame_master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3894463754240
+    m_Key: pregame_wait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3956644311040
+    m_Key: err_room_empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3996335009792
+    m_Key: err_room_exists
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4048918999040
+    m_Key: err_room_missing
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

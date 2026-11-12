@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;               
+using UnityEngine.Localization.Settings;     
 
 public class FusionConnector : MonoBehaviour
 {
@@ -52,6 +54,10 @@ public class FusionConnector : MonoBehaviour
 
     public static FusionConnector Instance { get; private set; }
 
+    //guardamos claves, no textos, para poder repintar al cambiar de idioma
+    private string _currentRoom;
+    private string _pregameKey;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -63,6 +69,19 @@ public class FusionConnector : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    
+    //cambio inicio
+    private void OnEnable() => LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+    private void OnDisable() => LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+
+    private void OnLocaleChanged(Locale _)
+    {
+        if (!string.IsNullOrEmpty(_currentRoom))
+            roomName.text = Loc.Get("UI", "room_label", _currentRoom);
+        if (!string.IsNullOrEmpty(_pregameKey))
+            preGameMessage.text = Loc.Get("UI", _pregameKey);
+    }
+    //cambio fin
 
     private void OnDestroy()
     {
@@ -73,7 +92,7 @@ public class FusionConnector : MonoBehaviour
     {
         if (string.IsNullOrEmpty(LocalRoomName))
         {
-            ShowError("Escribe un nombre de sala.");
+            ShowError(Loc.Get("UI", "err_room_empty")); //cambio
             return;
         }
 
@@ -92,6 +111,7 @@ public class FusionConnector : MonoBehaviour
         if (!result.Ok)
         {
             roomName.text = string.Empty;
+            _currentRoom = null; //cambio
             GoToMainMenu();
             ShowError(result.ErrorMessage);
             Debug.LogError(result.ErrorMessage);
@@ -102,15 +122,16 @@ public class FusionConnector : MonoBehaviour
 
             if (createRoom && !roomWasEmpty)
             {
-                LeaveWithError(newRunner, $"La sala \"{LocalRoomName}\" ya existe.");
+                LeaveWithError(newRunner, Loc.Get("UI", "err_room_exists", LocalRoomName));   // LOC
             }
             else if (!createRoom && roomWasEmpty)
             {
-                LeaveWithError(newRunner, $"La sala \"{LocalRoomName}\" no existe.");
+                LeaveWithError(newRunner, Loc.Get("UI", "err_room_missing", LocalRoomName));  // LOC
             }
             else
             {
-                roomName.text = "Room:  " + newRunner.SessionInfo.Name;
+                _currentRoom = newRunner.SessionInfo.Name;                                    // LOC
+                roomName.text = Loc.Get("UI", "room_label", _currentRoom);
                 GoToGame();
             }
         }
@@ -139,18 +160,13 @@ public class FusionConnector : MonoBehaviour
             return;
         }
 
-        if (runner.IsSharedModeMasterClient == true)
-        {
-            SetPregameMessage("Game Is Ready To Start");
-        }
-        else
-        {
-            SetPregameMessage("Waiting for master client to start game.");
-        }
+        SetPregameKey(runner.IsSharedModeMasterClient ? "pregame_master" : "pregame_wait");
+
     }
-    public void SetPregameMessage(string message)
+    public void SetPregameKey(string key)
     {
-        preGameMessage.text = message;
+        _pregameKey = key;
+        preGameMessage.text = string.IsNullOrEmpty(key) ? string.Empty : Loc.Get("UI", key);
     }
 
     public void StartTriviaGame()
@@ -191,7 +207,8 @@ public class FusionConnector : MonoBehaviour
             await runner.Shutdown(true, ShutdownReason.Ok);
 
         roomName.text = string.Empty;
-        SetPregameMessage(string.Empty);
+        _currentRoom = null;                  
+        SetPregameKey(null);                 
         showGameButton.SetActive(false);
         GoToMainMenu();
         ShowError(message);

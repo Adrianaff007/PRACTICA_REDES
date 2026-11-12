@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 /// <summary>
 /// Singleton network behavoir that manages the game and is managed by the shared mode master client.
@@ -130,10 +132,6 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
 
     public override void Spawned()
     {
-        if (QuestionsAsked == 0)
-            questionIndicatorText.text = "";
-        else
-            questionIndicatorText.text = "Question: " + QuestionsAsked + " / " + maxQuestions;
 
         // Disallows players from joining once the game is started.
         if (Runner.IsSharedModeMasterClient)
@@ -155,8 +153,7 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
 
         TriviaManagerPresent = true;
 
-        FusionConnector.Instance?.SetPregameMessage(string.Empty);
-
+        FusionConnector.Instance?.SetPregameKey(null);
         OnTriviaGameStateChanged();
         UpdateCurrentQuestion();
         UpdateQuestionsAskedText();
@@ -254,6 +251,47 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
             }
         }
     }
+    private string _winnerName = null;
+
+    private void OnEnable() => LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+    private void OnDisable() => LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+
+    private void OnLocaleChanged(Locale _)
+    {
+        UpdateQuestionsAskedText();
+        ApplyQuestionTexts();
+        UpdateTriviaMessage();
+    }
+
+    private void UpdateTriviaMessage()
+    {
+        switch (GameState)
+        {
+            case TriviaGameState.Intro:
+                triviaMessage.text = Loc.Get("UI", "msg_intro"); break;
+            case TriviaGameState.NewRound:
+                triviaMessage.text = Loc.Get("UI", "msg_newround"); break;
+            case TriviaGameState.GameOver:
+                triviaMessage.text = string.IsNullOrEmpty(_winnerName)
+                    ? Loc.Get("UI", "msg_no_winners")
+                    : Loc.Get("UI", "msg_winner", _winnerName);
+                break;
+            default:
+                triviaMessage.text = string.Empty; break;
+        }
+    }
+
+    private void ApplyQuestionTexts()
+    {
+        if (CurrentQuestion < 0) return;
+
+        var q = triviaQuestions.Questions[randomizedQuestionList[CurrentQuestion]];
+        question.text = q.GetQuestion();
+        answers[0].text = q.GetCorrect();
+        answers[1].text = q.GetDecoy(0);
+        answers[2].text = q.GetDecoy(1);
+        answers[3].text = q.GetDecoy(2);
+    }
 
     /// <summary>
     /// Called when a player picks an answer.
@@ -322,8 +360,7 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
 
             TriviaPlayer.LocalPlayer.Expression = TriviaPlayer.AvatarExpressions.Neutral;
 
-            triviaMessage.text = GameState == TriviaGameState.Intro ? "Select The Correct Answer\nStarting Game Soon" : "New Game Starting Soon!";
-
+            UpdateTriviaMessage();
             endGameObject.Hide();
         }
         else if (GameState == TriviaGameState.ShowAnswer)
@@ -370,7 +407,8 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
 
         endGameObject.Show(winners);
 
-        triviaMessage.text = winners.Count == 0 ? "No winners" : winners[0].PlayerName.Value + " Wins!";
+        _winnerName = winners.Count == 0 ? null : winners[0].PlayerName.Value;
+        UpdateTriviaMessage();
 
         // Puntuación mínima para estar en el podio (los empates con el 3.º también cuentan)
         int minPodiumScore = winners.Count == 3 ? winners[2].Score : 1;
@@ -434,13 +472,7 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
 
             int questionIndex = randomizedQuestionList[CurrentQuestion];
 
-            question.text = triviaQuestions.Questions[questionIndex].question;
-
-            answers[0].text = triviaQuestions.Questions[questionIndex].correctAnswer;
-
-            answers[1].text = triviaQuestions.Questions[questionIndex].decoyAnswers[0];
-            answers[2].text = triviaQuestions.Questions[questionIndex].decoyAnswers[1];
-            answers[3].text = triviaQuestions.Questions[questionIndex].decoyAnswers[2];
+            ApplyQuestionTexts();
 
             // Scrambles the answers.  This can be different per player.
             List<int> answerIndices = new List<int>() { 0, 1, 2, 3 };
@@ -473,10 +505,9 @@ public class TriviaManager : NetworkBehaviour, IStateAuthorityChanged
 
     private void UpdateQuestionsAskedText()
     {
-        if (QuestionsAsked == 0)
-            questionIndicatorText.text = "";
-        else
-            questionIndicatorText.text = "Question: " + QuestionsAsked + " / " + maxQuestions;
+        questionIndicatorText.text = QuestionsAsked == 0
+            ? ""
+            : Loc.Get("UI", "question_counter", QuestionsAsked, maxQuestions);
     }
 
     public async void LeaveGame()

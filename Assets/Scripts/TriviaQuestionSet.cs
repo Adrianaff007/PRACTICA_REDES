@@ -24,13 +24,19 @@ public class TriviaQuestionSet : ScriptableObject
 	[System.Serializable()]
 	public class TriviaQuestion
 	{
-		[Tooltip("The question being asked.")]
-		public string question;
+        public string key;   // Q1, Q2
 
-		[Tooltip("The correct answer to the question.")]
-		public string correctAnswer;
-		public string[] decoyAnswers;
-	}
+        [Tooltip("The question being asked.")]
+        public string question;
+
+        [Tooltip("The correct answer to the question.")]
+        public string correctAnswer;
+        public string[] decoyAnswers;
+
+        public string GetQuestion() => Loc.Get("Questions", key + "_Text");
+        public string GetCorrect() => Loc.Get("Questions", key + "_Correct");
+        public string GetDecoy(int i) => Loc.Get("Questions", key + "_Decoy" + (i + 1));
+    }
 
 	[ContextMenu("Create Questions")]
 	public void CreateQuestions()
@@ -82,7 +88,8 @@ public class TriviaQuestionSet : ScriptableObject
 		for (int i = 0; i < list.Count; i++)
         {
 			TriviaQuestion question = new TriviaQuestion();
-			List<string> keys = new List<string>(list[i].Keys);
+            question.key = "Q" + (i + 1);
+            List<string> keys = new List<string>(list[i].Keys);
 
 			question.question = list[i][keys[0]] as string;
 			question.correctAnswer = list[i][keys[1]] as string;
@@ -94,5 +101,28 @@ public class TriviaQuestionSet : ScriptableObject
 
 			_questions.Add(question);
         }
-	}
+#if UNITY_EDITOR
+        UnityEditor.EditorUtility.SetDirty(this);
+#endif
+    }
+
+    [ContextMenu("Export CSV for String Table")]
+    public void ExportCsv()
+    {
+        string Esc(string s) => "\"" + (s ?? "").Replace("\"", "\"\"") + "\"";
+
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine("Key,English(en),Spanish(es)");
+        foreach (var q in _questions)
+        {
+            sb.AppendLine($"{q.key}_Text,{Esc(q.question)},");
+            sb.AppendLine($"{q.key}_Correct,{Esc(q.correctAnswer)},");
+            for (int i = 0; i < 3; i++)
+                sb.AppendLine($"{q.key}_Decoy{i + 1},{Esc(q.decoyAnswers[i])},");
+        }
+
+        string path = System.IO.Path.Combine(Application.dataPath, "preguntas_export.csv");
+        System.IO.File.WriteAllText(path, sb.ToString(), new System.Text.UTF8Encoding(true));
+        Debug.Log("CSV exportado en: " + path);
+    }
 }

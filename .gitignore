@@ -12,3 +12,6 @@
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+
+# Visual Studio
+.vs/
